@@ -26,12 +26,7 @@ const Home = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center max-w-5xl mx-auto">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 glass-card px-6 py-3 rounded-full mb-8 fade-in">
-              <Sparkles className="w-5 h-5 text-purple-600" />
-              <span className="text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                AI-Powered Twitter Analytics
-              </span>
-            </div>
+            
 
             {/* Main Heading */}
             <h1 className="text-5xl md:text-7xl font-bold mb-6 slide-in-left">
@@ -40,7 +35,7 @@ const Home = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto slide-in-right">
-              Real-time sentiment analysis and trending topics powered by advanced AI. 
+              Real-time sentiment analysis and trending topics. 
               Unlock insights from millions of tweets.
             </p>
             
@@ -51,7 +46,7 @@ const Home = () => {
                   <Search className="w-5 h-5 text-gray-400 mr-3" />
                   <input 
                     type="text" 
-                    placeholder="Search trending topics, hashtags..." 
+                    placeholder="Search..." 
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full bg-transparent border-none outline-none text-gray-700 placeholder-gray-400"
@@ -61,8 +56,8 @@ const Home = () => {
                   type="submit" 
                   className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
                 >
-                  <Zap className="w-5 h-5" />
-                  Analyze Now
+                 
+                 Search Now
                 </button>
               </div>
             </form>
@@ -91,12 +86,8 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-purple-600 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-purple-600 rounded-full mt-2 animate-pulse"></div>
-          </div>
-        </div>
+       
+       
       </section>
 
       {/* Features Section */}
@@ -116,14 +107,14 @@ const Home = () => {
               {
                 icon: TrendingUp,
                 title: 'Trend Tracking',
-                description: 'Monitor real-time trending topics and hashtags. Stay ahead of viral conversations with AI-powered predictions.',
+                description: 'Monitor real-time trending topics and hashtags. Stay ahead of viral conversations.',
                 gradient: 'from-blue-500 to-cyan-500',
                 bgGradient: 'from-blue-50 to-cyan-50'
               },
               {
                 icon: BarChart3,
                 title: 'Sentiment Analysis',
-                description: 'Advanced AI-powered sentiment analysis to understand public opinion and emotional tone of conversations.',
+                description: 'Advanced sentiment analysis to understand public opinion and emotional tone of conversations.',
                 gradient: 'from-green-500 to-emerald-500',
                 bgGradient: 'from-green-50 to-emerald-50'
               },
