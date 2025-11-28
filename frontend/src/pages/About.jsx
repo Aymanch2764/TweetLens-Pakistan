@@ -15,10 +15,7 @@ const About = () => {
         </div>
         
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 glass-card px-6 py-3 rounded-full mb-8">
-            <Sparkles className="w-5 h-5 text-purple-600" />
-            <span className="text-sm font-semibold gradient-text">About TweetLens Pakistan</span>
-          </div>
+          
           <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
             Empowering Insights Through Data
           </h1>
@@ -124,9 +121,9 @@ const About = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
-              { name: 'Samreen Kazmi', role: 'Project Lead & Developer', gradient: 'from-purple-500 to-pink-500' },
-              { name: 'Team Member 2', role: 'Data Scientist', gradient: 'from-blue-500 to-cyan-500' },
-              { name: 'Team Member 3', role: 'ML Engineer', gradient: 'from-green-500 to-emerald-500' },
+              { name: 'Ayman Chaudhryi', role: 'Frontend Developer', gradient: 'from-purple-500 to-pink-500' },
+              { name: 'Samreen Kazmi ', role: 'Backend Developer ', gradient: 'from-blue-500 to-cyan-500' },
+              { name: 'Alia ', role: 'Researcher', gradient: 'from-green-500 to-emerald-500' },
             ].map((member, i) => (
               <div key={i} className="glass-card rounded-2xl p-8 text-center card-hover group">
                 <div className={`w-32 h-32 bg-gradient-to-r ${member.gradient} rounded-full mx-auto mb-4 flex items-center justify-center text-white text-4xl font-bold group-hover:scale-110 transition-transform shadow-2xl`}>
