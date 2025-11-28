@@ -28,7 +28,7 @@ const Analytics = () => {
               <Calendar className="w-5 h-5 text-purple-600" />
               <span className="font-semibold text-gray-700">Date Range:</span>
             </div>
-            {['24h', '7d', '30d', '90d', 'Custom'].map((range) => (
+            {['24h', '7d', '30d', 'Custom'].map((range) => (
               <button
                 key={range}
                 onClick={() => setDateRange(range)}
