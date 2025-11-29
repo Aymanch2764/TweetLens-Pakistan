@@ -4,6 +4,16 @@ import { Calendar, Download, Filter, BarChart3, Users, TrendingUp } from 'lucide
 const Analytics = () => {
   const [dateRange, setDateRange] = useState('7d');
 
+  const tweetVolumeData = [
+    { day: 'Mon', value: 45 },
+    { day: 'Tue', value: 62 },
+    { day: 'Wed', value: 58 },
+    { day: 'Thu', value: 73 },
+    { day: 'Fri', value: 68 },
+    { day: 'Sat', value: 82 },
+    { day: 'Sun', value: 78 },
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-8 pt-24">
       <div className="container mx-auto px-6">
@@ -46,34 +56,33 @@ const Analytics = () => {
 
         {/* Analytics Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          {/* Tweet Volume Chart */}
+          {/* Tweet Volume Chart - FIXED */}
           <div className="glass-card rounded-2xl p-6 card-hover">
             <div className="flex items-center gap-2 mb-6">
               <BarChart3 className="w-6 h-6 text-purple-600" />
               <h2 className="text-xl font-bold text-gray-800">Tweet Volume Over Time</h2>
             </div>
-            <div className="h-64 flex items-end justify-around gap-2">
-              {[45, 62, 58, 73, 68, 82, 78, 85, 92, 88, 95, 90, 98, 94].map((height, i) => (
-                <div key={i} className="flex-1 group relative">
-                  <div 
-                    className="bg-gradient-to-t from-purple-600 to-indigo-500 rounded-t-lg hover:from-purple-700 hover:to-indigo-600 transition-all cursor-pointer"
-                    style={{ height: `${height}%` }}
-                  >
-                    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                      {height}% activity
+            <div className="h-64 flex items-end justify-around gap-2 bg-gradient-to-b from-purple-50 to-transparent rounded-lg p-4">
+              {tweetVolumeData.map((item, i) => (
+                <div key={i} className="flex-1 flex flex-col items-center group">
+                  <div className="relative w-full">
+                    {/* Tooltip */}
+                    <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-3 py-2 rounded-lg text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10 pointer-events-none">
+                      {item.value}K tweets
+                      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-2 h-2 bg-gray-800"></div>
                     </div>
+                    
+                    {/* Bar */}
+                    <div 
+                      className="w-full bg-gradient-to-t from-purple-600 to-indigo-500 rounded-t-lg hover:from-purple-700 hover:to-indigo-600 transition-all cursor-pointer shadow-lg"
+                      style={{ height: `${item.value * 2.8}px` }}
+                    ></div>
                   </div>
+                  
+                  {/* Day Label */}
+                  <span className="text-xs text-gray-600 font-semibold mt-2">{item.day}</span>
                 </div>
               ))}
-            </div>
-            <div className="flex justify-between mt-4 text-sm text-gray-500 font-medium">
-              <span>Mon</span>
-              <span>Tue</span>
-              <span>Wed</span>
-              <span>Thu</span>
-              <span>Fri</span>
-              <span>Sat</span>
-              <span>Sun</span>
             </div>
           </div>
 
@@ -154,10 +163,9 @@ const Analytics = () => {
             </div>
             <div className="space-y-5">
               {[
-                { tag: '#WaterShoratage', uses: '45.2K', growth: '+125%', color: 'blue' },
-                { tag: '#LoadShedding', uses: '38.7K', growth: '+98%', color: 'purple' },
-                { tag: '#Theft', uses: '32.1K', growth: '+76%', color: 'green' },
-                
+                { tag: '#WaterShortage', uses: '45.2K', growth: '+125%', percent: 90 },
+                { tag: '#LoadShedding', uses: '38.7K', growth: '+98%', percent: 75 },
+                { tag: '#Theft', uses: '32.1K', growth: '+76%', percent: 60 },
               ].map((hashtag, i) => (
                 <div key={i} className="relative">
                   <div className="flex justify-between items-center mb-2">
@@ -169,8 +177,12 @@ const Analytics = () => {
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
                     <div 
-                      className={`h-3 rounded-full bg-gradient-to-r from-${hashtag.color}-500 to-${hashtag.color}-600 transition-all`}
-                      style={{ width: `${90 - i * 12}%` }}
+                      className={`h-3 rounded-full transition-all ${
+                        i === 0 ? 'bg-gradient-to-r from-blue-500 to-blue-600' :
+                        i === 1 ? 'bg-gradient-to-r from-purple-500 to-purple-600' :
+                        'bg-gradient-to-r from-green-500 to-green-600'
+                      }`}
+                      style={{ width: `${hashtag.percent}%` }}
                     ></div>
                   </div>
                 </div>
@@ -182,17 +194,17 @@ const Analytics = () => {
         {/* Peak Activity Times */}
         <div className="glass-card rounded-2xl p-6 card-hover">
           <h2 className="text-xl font-bold text-gray-800 mb-6">Peak Activity Times (24h)</h2>
-          <div className="grid grid-cols-24 gap-1 h-32 items-end">
+          <div className="h-40 flex items-end justify-between gap-1 bg-gradient-to-b from-purple-50 to-transparent rounded-lg p-4">
             {Array.from({ length: 24 }, (_, i) => {
-              const activity = Math.sin(i / 4) * 50 + 50;
+              const activity = Math.sin(i / 4) * 40 + 50;
               return (
-                <div key={i} className="relative group">
+                <div key={i} className="flex-1 relative group">
                   <div 
-                    className="bg-gradient-to-t from-purple-600 to-indigo-500 hover:from-purple-700 hover:to-indigo-600 rounded-t transition-all cursor-pointer"
+                    className="w-full bg-gradient-to-t from-purple-600 to-indigo-500 hover:from-purple-700 hover:to-indigo-600 rounded-t transition-all cursor-pointer"
                     style={{ height: `${activity}%` }}
                   >
-                    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
-                      {i}:00
+                    <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
+                      {i}:00 - {Math.round(activity)}%
                     </div>
                   </div>
                 </div>
