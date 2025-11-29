@@ -154,11 +154,10 @@ const Analytics = () => {
             </div>
             <div className="space-y-5">
               {[
-                { tag: '#PakistanCricket', uses: '45.2K', growth: '+125%', color: 'blue' },
-                { tag: '#Elections2024', uses: '38.7K', growth: '+98%', color: 'purple' },
-                { tag: '#Karachi', uses: '32.1K', growth: '+76%', color: 'green' },
-                { tag: '#Education', uses: '19.5K', growth: '+42%', color: 'orange' },
-                { tag: '#Technology', uses: '17.2K', growth: '+38%', color: 'indigo' },
+                { tag: '#WaterShoratage', uses: '45.2K', growth: '+125%', color: 'blue' },
+                { tag: '#LoadShedding', uses: '38.7K', growth: '+98%', color: 'purple' },
+                { tag: '#Theft', uses: '32.1K', growth: '+76%', color: 'green' },
+                
               ].map((hashtag, i) => (
                 <div key={i} className="relative">
                   <div className="flex justify-between items-center mb-2">
