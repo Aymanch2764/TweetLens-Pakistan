@@ -18,8 +18,8 @@ const Footer = () => {
                   <Twitter className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <span className="text-2xl font-bold gradient-text">TweetLens Pakistan</span>
-                  <p className="text-xs text-gray-600">AI-Powered Analytics</p>
+                  <span className="text-2xl font-bold gradient-text">TweetLens Pk</span>
+                 
                 </div>
               </div>
               <p className="text-gray-600 mb-6 leading-relaxed max-w-md">
@@ -53,7 +53,7 @@ const Footer = () => {
                 Quick Links
               </h3>
               <ul className="space-y-3">
-                {['Dashboard', 'Trends', 'Sentiment', 'Analytics', 'About'].map((item) => (
+                {['Dashboard', 'Sentiment', 'Analytics', 'About'].map((item) => (
                   <li key={item}>
                     <Link 
                       to={`/${item.toLowerCase()}`}
@@ -78,14 +78,14 @@ const Footer = () => {
                   <Mail className="w-5 h-5 mr-3 mt-0.5 text-purple-600" />
                   <div>
                     <p className="text-sm font-medium text-gray-800">Email</p>
-                    <p className="text-sm">info@tweetlens.pk</p>
+                    <p className="text-sm">tweetlenspk@gmail.com</p>
                   </div>
                 </li>
                 <li className="flex items-start text-gray-600">
                   <Phone className="w-5 h-5 mr-3 mt-0.5 text-purple-600" />
                   <div>
                     <p className="text-sm font-medium text-gray-800">Phone</p>
-                    <p className="text-sm">+92 XXX XXXXXXX</p>
+                    <p className="text-sm">+92 3167274903</p>
                   </div>
                 </li>
                 <li className="flex items-start text-gray-600">
@@ -105,9 +105,7 @@ const Footer = () => {
               <p className="text-gray-600 text-sm text-center md:text-left">
                 &copy; {new Date().getFullYear()} TweetLens Pakistan. All rights reserved.
               </p>
-              <p className="text-gray-600 text-sm flex items-center">
-                Made with <Heart className="w-4 h-4 mx-1 text-red-500 fill-current" /> by Samreen Kazmi
-              </p>
+             
             </div>
           </div>
         </div>
