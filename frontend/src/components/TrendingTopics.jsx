@@ -3,12 +3,10 @@ import { TrendingUp, Flame } from 'lucide-react';
 
 const TrendingTopics = () => {
   const topics = [
-    { rank: 1, hashtag: '#PakistanCricket', tweets: '45.2K', change: '+125%', gradient: 'from-blue-500 to-cyan-500' },
-    { rank: 2, hashtag: '#Elections2024', tweets: '38.7K', change: '+98%', gradient: 'from-purple-500 to-pink-500' },
-    { rank: 3, hashtag: '#Karachi', tweets: '32.1K', change: '+76%', gradient: 'from-green-500 to-emerald-500' },
-    { rank: 4, hashtag: '#PTI', tweets: '28.9K', change: '+65%', gradient: 'from-orange-500 to-red-500' },
-    { rank: 5, hashtag: '#Lahore', tweets: '25.3K', change: '+54%', gradient: 'from-indigo-500 to-purple-500' },
-  ];
+    { rank: 1, hashtag: '#Load Shedding', tweets: '45.2K', change: '+125%', gradient: 'from-blue-500 to-cyan-500' },
+    { rank: 2, hashtag: '#Water Shortage', tweets: '38.7K', change: '+98%', gradient: 'from-purple-500 to-pink-500' },
+    { rank: 3, hashtag: '#Theft', tweets: '32.1K', change: '+76%', gradient: 'from-green-500 to-emerald-500' },
+  ]
 
   return (
     <div className="glass-card rounded-2xl p-8 card-hover h-full">
