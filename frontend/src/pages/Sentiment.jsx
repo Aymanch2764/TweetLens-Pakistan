@@ -11,13 +11,10 @@ const Sentiment = () => {
   };
 
   const topicSentiments = [
-    { topic: 'Politics', positive: 45, neutral: 30, negative: 25, gradient: 'from-blue-500 to-cyan-500' },
-    { topic: 'Sports', positive: 78, neutral: 15, negative: 7, gradient: 'from-green-500 to-emerald-500' },
-    { topic: 'Economy', positive: 32, neutral: 28, negative: 40, gradient: 'from-orange-500 to-red-500' },
-    { topic: 'Entertainment', positive: 85, neutral: 10, negative: 5, gradient: 'from-purple-500 to-pink-500' },
-    { topic: 'Education', positive: 55, neutral: 35, negative: 10, gradient: 'from-indigo-500 to-purple-500' },
-    { topic: 'Technology', positive: 72, neutral: 20, negative: 8, gradient: 'from-cyan-500 to-blue-500' },
-  ];
+    { topic: 'Water Shortage', positive: 45, neutral: 30, negative: 25, gradient: 'from-blue-500 to-cyan-500' },
+    { topic: 'Load Shedding', positive: 78, neutral: 15, negative: 7, gradient: 'from-green-500 to-emerald-500' },
+    { topic: 'Theft', positive: 32, neutral: 28, negative: 40, gradient: 'from-orange-500 to-red-500' },
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-8 pt-24">
