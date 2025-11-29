@@ -121,9 +121,9 @@ const About = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
-              { name: 'Ayman Chaudhryi', role: 'Frontend Developer', gradient: 'from-purple-500 to-pink-500' },
-              { name: 'Samreen Kazmi ', role: 'Backend Developer ', gradient: 'from-blue-500 to-cyan-500' },
-              { name: 'Alia ', role: 'Researcher', gradient: 'from-green-500 to-emerald-500' },
+              { name: 'Ayman Chaudhry', role: 'Frontend Developer', gradient: 'from-purple-500 to-pink-500' },
+              { name: 'Samreen Kazmi', role: 'Backend Developer', gradient: 'from-blue-500 to-cyan-500' },
+              { name: 'Alia', role: 'Researcher', gradient: 'from-green-500 to-emerald-500' },
             ].map((member, i) => (
               <div key={i} className="glass-card rounded-2xl p-8 text-center card-hover group">
                 <div className={`w-32 h-32 bg-gradient-to-r ${member.gradient} rounded-full mx-auto mb-4 flex items-center justify-center text-white text-4xl font-bold group-hover:scale-110 transition-transform shadow-2xl`}>
@@ -138,25 +138,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600"></div>
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-blob"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-blob animation-delay-2000"></div>
-        </div>
-        
-        <div className="container mx-auto px-6 relative z-10 text-center text-white">
-          <Globe className="w-16 h-16 mx-auto mb-6 animate-pulse" />
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
-          <p className="text-xl mb-10 max-w-2xl mx-auto">
-            Start exploring Pakistani Twitter trends and insights today
-          </p>
-          <button className="bg-white text-purple-600 px-10 py-5 rounded-xl font-bold text-lg hover:scale-105 hover:shadow-2xl transition-all">
-            Explore Dashboard
-          </button>
-        </div>
-      </section>
-
+     
       <style jsx>{`
         @keyframes blob {
           0%, 100% { transform: translate(0, 0) scale(1); }
