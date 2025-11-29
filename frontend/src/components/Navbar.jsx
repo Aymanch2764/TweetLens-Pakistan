@@ -22,7 +22,6 @@ const Navbar = () => {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/dashboard', label: 'Dashboard' },
-    { path: '/trends', label: 'Trends' },
     { path: '/sentiment', label: 'Sentiment' },
     { path: '/analytics', label: 'Analytics' },
     { path: '/about', label: 'About' },
@@ -57,7 +56,6 @@ const Navbar = () => {
               </span>
               <div className="flex items-center gap-1">
                 <span className="text-xs text-gray-600 font-semibold">Pakistan</span>
-                <Sparkles className="w-3 h-3 text-purple-500" />
               </div>
             </div>
           </Link>
@@ -84,11 +82,20 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button (Desktop) */}
-          <div className="hidden md:block">
-            <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2.5 rounded-lg font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-              Get Started
-            </button>
+          {/* CTA Buttons (Desktop) */}
+          <div className="hidden md:flex items-center gap-3">
+            <Link 
+              to="/login" 
+              className="text-purple-600 px-6 py-2.5 rounded-lg font-semibold hover:bg-purple-50 transition-all duration-300"
+            >
+              Login
+            </Link>
+            <Link 
+              to="/signup" 
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2.5 rounded-lg font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+            >
+              Sign Up
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -108,7 +115,7 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         <div 
           className={`md:hidden overflow-hidden transition-all duration-300 ${
-            isMenuOpen ? 'max-h-96 mt-4' : 'max-h-0'
+            isMenuOpen ? 'max-h-[500px] mt-4' : 'max-h-0'
           }`}
         >
           <div className="glass-card rounded-xl p-4 space-y-2">
@@ -126,9 +133,22 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <button className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold shadow-lg mt-4">
-              Get Started
-            </button>
+            <div className="flex flex-col gap-2 mt-4">
+              <Link 
+                to="/login" 
+                onClick={toggleMenu} 
+                className="w-full text-purple-600 px-6 py-3 rounded-lg font-semibold border-2 border-purple-600 hover:bg-purple-50 transition-all text-center"
+              >
+                Login
+              </Link>
+              <Link 
+                to="/signup" 
+                onClick={toggleMenu} 
+                className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold shadow-lg text-center"
+              >
+                Sign Up
+              </Link>
+            </div>
           </div>
         </div>
       </div>
