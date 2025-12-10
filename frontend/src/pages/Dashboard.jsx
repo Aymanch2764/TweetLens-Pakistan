@@ -3,7 +3,6 @@ import { TrendingUp, Users, MessageCircle, Heart, ArrowUpRight, ArrowDownRight }
 import SentimentChart from '../components/SentimentChart';
 import TrendingTopics from '../components/TrendingTopics';
 import RecentTweets from '../components/RecentTweets';
-
 const Dashboard = () => {
   const [stats, setStats] = useState({
     totalTweets: 2456789,
