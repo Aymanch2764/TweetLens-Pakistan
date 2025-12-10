@@ -8,7 +8,6 @@ const TrendingTopics = () => {
     { rank: 3, hashtag: '#Theft', tweets: '32.1K', change: '+76%', gradient: 'from-green-500 to-emerald-500' },
   ]
 
-  
   return (
     <div className="glass-card rounded-2xl p-8 card-hover h-full">
       <div className="flex items-center justify-between mb-6">
