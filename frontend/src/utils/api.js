@@ -10,7 +10,6 @@ const api = axios.create({
   headers: {
     'Content-Type': 'application/json',
   }
-  
 });
 // Request interceptor for adding auth tokens if needed
 api.interceptors.request.use(
