@@ -11,8 +11,6 @@ const Dashboard = () => {
     avgEngagement: 8.5,
     positiveSentiment: 62
   });
-
-  
   const statCards = [
     {
       title: 'Total Tweets',
