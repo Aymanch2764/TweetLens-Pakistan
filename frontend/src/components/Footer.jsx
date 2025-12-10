@@ -2,7 +2,6 @@ import React from 'react';
 import { Twitter, Github, Linkedin, Mail, Heart, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-
 const Footer = () => {
   return (
     <footer className="relative mt-20">
