@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Search, TrendingUp, BarChart3, Users, Sparkles, Zap, Shield, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Home = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
