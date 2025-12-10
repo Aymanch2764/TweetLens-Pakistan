@@ -14,6 +14,7 @@ const Analytics = () => {
     { day: 'Sun', value: 78 },
   ];
 
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-8 pt-24">
       <div className="container mx-auto px-6">
