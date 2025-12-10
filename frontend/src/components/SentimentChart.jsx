@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const SentimentChart = () => {
   const data = [
     { day: 'Mon', positive: 65, neutral: 20, negative: 15 },
