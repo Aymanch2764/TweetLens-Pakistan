@@ -13,6 +13,7 @@ const About = () => {
             <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
           </div>
         </div>
+
         
         <div className="container mx-auto px-6 relative z-10 text-center">
           
