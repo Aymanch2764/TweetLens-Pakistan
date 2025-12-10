@@ -9,7 +9,6 @@ const Sentiment = () => {
     neutral: 23,
     negative: 15
   };
-
   const topicSentiments = [
     { topic: 'Water Shortage', positive: 45, neutral: 30, negative: 25, gradient: 'from-blue-500 to-cyan-500' },
     { topic: 'Load Shedding', positive: 78, neutral: 15, negative: 7, gradient: 'from-green-500 to-emerald-500' },
